@@ -242,6 +242,7 @@ class AbstractMatPlot:
         subplot_shape
             The number of rows and columns in the subplot.
         """
+
         if subplot_shape is None:
             subplot_shape = self.get_subplot_shape(number_subplots=self.number_subplots)
 
@@ -257,4 +258,5 @@ class AbstractMatPlot:
 
         self.subplot_index += 1
 
+        plt.tight_layout()
         return ax

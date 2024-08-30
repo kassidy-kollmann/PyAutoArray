@@ -280,7 +280,7 @@ class MatPlot2D(AbstractMatPlot):
         norm = self.cmap.norm_from(array=array)
 
         origin = conf.instance["visualize"]["general"]["general"]["imshow_origin"]
-
+        
         plt.imshow(
             X=array.native,
             aspect=aspect,
@@ -296,7 +296,7 @@ class MatPlot2D(AbstractMatPlot):
             )
 
         extent_axis = self.axis.config_dict.get("extent")
-
+        
         if extent_axis is None:
             extent_axis = extent
 
@@ -348,7 +348,7 @@ class MatPlot2D(AbstractMatPlot):
         # )
 
         grid_indexes = None
-
+        
         if visuals_2d.indexes is not None or visuals_2d.pix_indexes is not None:
             grid_indexes = array.mask.derive_grid.unmasked
 

@@ -112,7 +112,6 @@ class AbstractPlotter:
             If the figure is a subplot, the setup_figure function is omitted to ensure that each subplot does not create a \
             new figure and so that it can be output using the *output.output_figure(structure=None)* function.
         """
-
         self.set_mat_plots_for_subplot(
             is_for_subplot=True,
             number_subplots=number_subplots,
@@ -142,7 +141,7 @@ class AbstractPlotter:
         number_subplots
             The number of subplots that are to be plotted in the figure.
         """
-
+        
         if self.subplot_figsize is not None:
             return self.subplot_figsize
 
@@ -176,6 +175,7 @@ class AbstractPlotter:
         )
 
     def _subplot_custom_plot(self, **kwargs):
+    
         figures_dict = dict(
             (key, value) for key, value in kwargs.items() if value is True
         )
